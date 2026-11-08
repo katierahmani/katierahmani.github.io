@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="A portfolio of industrial-organizational psychology projects in people analytics, employee experience, talent, and organizational effectiveness.">
+  <title>Katie Rahmani — I-O Psychology Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f5f3ed;
+      --ink: #1d2925;
+      --muted: #68726b;
+      --green: #315d4a;
+      --green-dark: #234537;
+      --lime: #d6e5a5;
+      --line: #d9ddd3;
+      --white: #fffefa;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: 'DM Sans', sans-serif;
+      --display: 'Manrope', sans-serif;
+      --mono: 'DM Mono', monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .shell { max-width: 1240px; width: calc(100% - 96px); margin: 0 auto; }
+    .topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-size: 15px; font-weight: 800; letter-spacing: -.04em; }
+    .brand-mark { width: 31px; height: 31px; border-radius: 50%; display: grid; place-items: center; background: var(--green); color: white; font-family: var(--serif); font-size: 18px; font-style: italic; font-weight: 400; }
+    .nav { display: flex; align-items: center; gap: 34px; font-size: 13px; font-weight: 600; }
+    .nav a:not(.nav-cta) { color: #536057; transition: color .2s; }
+    .nav a:not(.nav-cta):hover { color: var(--green); }
+    .nav-cta { padding: 11px 17px; border: 1px solid #9fa99e; border-radius: 4px; }
+    .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 74px; align-items: center; padding: 91px 0 96px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--green); font: 11px var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+    .eyebrow::before { content: ''; width: 25px; height: 1px; background: var(--green); }
+    h1 { max-width: 690px; margin: 22px 0 24px; font: 500 clamp(54px, 6vw, 78px)/1.04 var(--display); letter-spacing: -.075em; }
+    h1 em { color: var(--green); font-family: var(--serif); font-weight: 400; letter-spacing: -.06em; }
+    .hero-copy { max-width: 505px; color: var(--muted); font-size: 17px; line-height: 1.75; }
+    .hero-actions { display: flex; align-items: center; gap: 25px; margin-top: 34px; }
+    .button { display: inline-flex; gap: 12px; align-items: center; padding: 15px 19px; border-radius: 3px; background: var(--green); color: white; font-size: 13px; font-weight: 700; transition: background .2s, transform .2s; }
+    .button:hover { background: var(--green-dark); transform: translateY(-2px); }
+    .text-link { font-size: 13px; font-weight: 700; color: var(--green); }
+    .arrow { font-size: 18px; line-height: 0; }
+    .hero-art { min-height: 390px; position: relative; display: flex; align-items: center; justify-content: center; }
+    .orbit { position: absolute; width: 335px; height: 335px; border: 1px solid #d5dacd; border-radius: 50%; }
+    .orbit::before, .orbit::after { content: ''; position: absolute; inset: 30px; border: 1px solid #d5dacd; border-radius: 50%; }
+    .orbit::after { inset: 66px; border-color: #c8d1c3; }
+    .art-core { z-index: 1; width: 178px; height: 178px; display: grid; place-items: center; border-radius: 50%; background: var(--green); color: var(--lime); font: italic 72px var(--serif); box-shadow: 0 20px 50px #23453730; }
+    .orbit-label { position: absolute; z-index: 2; padding: 9px 12px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper); color: #536057; font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    .label-one { top: 50px; left: 10px; } .label-two { top: 112px; right: 0; } .label-three { bottom: 56px; left: 9px; } .label-four { bottom: 22px; right: 37px; }
+    .hero-note { position: absolute; left: 50%; bottom: -5px; transform: translateX(-50%); color: #899187; font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+    .proof { background: var(--green); color: white; }
+    .proof-inner { min-height: 95px; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; gap: 30px; }
+    .proof-item { display: flex; gap: 13px; align-items: center; color: #e4ebdf; font-size: 12px; letter-spacing: .01em; }
+    .proof-icon { width: 30px; height: 30px; border: 1px solid #79907f; border-radius: 50%; display: grid; place-items: center; color: var(--lime); font: 14px var(--serif); }
+    .section { padding: 105px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 43px; }
+    .section-kicker { color: var(--green); font: 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: 13px 0 0; font: 500 clamp(36px, 4vw, 51px)/1.1 var(--display); letter-spacing: -.065em; }
+    .section-intro { max-width: 385px; margin: 0 0 3px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+    .filter { border: 1px solid var(--line); background: transparent; padding: 9px 14px; border-radius: 2px; color: #667068; font: 11px var(--mono); cursor: pointer; transition: .2s; }
+    .filter:hover, .filter.active { border-color: var(--green); background: var(--green); color: white; }
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .project { min-height: 330px; padding: 27px 29px 25px; display: flex; flex-direction: column; justify-content: space-between; background: var(--white); border: 1px solid #e6e7df; transition: transform .25s, box-shadow .25s; }
+    .project:hover { transform: translateY(-4px); box-shadow: 0 16px 38px #1d292510; }
+    .project[hidden] { display: none; }
+    .project-top { display: flex; justify-content: space-between; align-items: center; }
+    .project-num { color: #8c958a; font: 11px var(--mono); }
+    .project-tag { padding: 7px 9px; background: #edf1e8; color: var(--green); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+    .project-art { height: 87px; width: 100%; margin: 18px 0 14px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f0f2eb; }
+    .project h3 { margin: 0 0 10px; font: 600 21px var(--display); letter-spacing: -.04em; }
+    .project p { max-width: 485px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+    .project-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; padding-top: 15px; border-top: 1px solid #e9ebe5; color: #657067; font: 10px var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+    .project-foot span:last-child { color: var(--green); font-size: 17px; }
+    .bars { height: 58px; display: flex; gap: 8px; align-items: end; }
+    .bars i { width: 15px; border-radius: 2px 2px 0 0; background: #8ca48d; }
+    .bars i:nth-child(1){height:24px}.bars i:nth-child(2){height:34px}.bars i:nth-child(3){height:27px}.bars i:nth-child(4){height:48px;background:#315d4a}.bars i:nth-child(5){height:41px;background:#315d4a}.bars i:nth-child(6){height:58px;background:#315d4a}.bars i:nth-child(7){height:50px;background:#315d4a}
+    .people-art { position: relative; width: 150px; height: 58px; display: flex; justify-content: center; align-items: center; }
+    .people-art::before { content: ''; width: 84px; height: 34px; border: 1px solid #94a68d; border-radius: 50%; position: absolute; }
+    .person { z-index: 1; width: 20px; height: 20px; margin: 0 4px; border-radius: 50%; background: #d4dfc3; border: 2px solid #f0f2eb; }
+    .person:nth-child(2), .person:nth-child(4) { background: #819a81; }
+    .person:nth-child(3) { background: #315d4a; }
+    .steps { display: flex; align-items: center; gap: 10px; }
+    .steps b { width: 28px; height: 28px; border: 1px solid #91a28a; border-radius: 50%; display: grid; place-items: center; color: var(--green); font: 10px var(--mono); }
+    .steps i { width: 25px; border-top: 1px solid #aeb8a9; }
+    .matrix { width: 90px; height: 58px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 4px; transform: rotate(-7deg); }
+    .matrix i { background: #dce5d2; border-radius: 2px; }.matrix i:nth-child(2), .matrix i:nth-child(4), .matrix i:nth-child(6) { background: #719077; }.matrix i:nth-child(5) { background: #315d4a; }
+    .approach { padding: 91px 0; background: #e9ede4; }
+    .approach-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 95px; }
+    .approach h2 { max-width: 360px; }
+    .approach-copy { padding-top: 8px; }
+    .approach-copy > p { max-width: 560px; margin: 0; color: #59645b; font-size: 15px; line-height: 1.85; }
+    .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 25px 35px; margin-top: 35px; }
+    .principle { padding-top: 17px; border-top: 1px solid #cbd4c8; }
+    .principle strong { display: block; margin-bottom: 7px; font: 600 14px var(--display); }
+    .principle span { color: var(--muted); font-size: 12px; line-height: 1.6; }
+    .about { display: grid; grid-template-columns: .75fr 1.25fr; gap: 95px; align-items: start; }
+    .about-card { min-height: 290px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; background: var(--green); color: white; }
+    .about-card .monogram { color: var(--lime); font: italic 90px/.9 var(--serif); }
+    .about-card p { margin: 0; max-width: 220px; color: #d9e2d7; font-size: 12px; line-height: 1.65; }
+    .about-copy h2 { margin-top: 10px; }
+    .about-copy > p { max-width: 595px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .skills span { padding: 9px 12px; border: 1px solid var(--line); color: #58635a; font: 10px var(--mono); }
+    .contact { padding: 75px 0; background: #dce6d5; }
+    .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
+    .contact h2 { max-width: 580px; font-size: clamp(35px, 4vw, 49px); }
+    .contact p { color: #59665b; font-size: 14px; }
+    .contact .button { white-space: nowrap; }
+    footer { padding: 27px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; color: #758077; font: 10px var(--mono); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a:hover { color: var(--green); }
+    @media (max-width: 850px) {
+      .shell { width: calc(100% - 48px); }
+      .hero { gap: 25px; padding: 70px 0; }
+      .hero-art { transform: scale(.85); }
+      .approach-grid, .about { gap: 45px; }
+    }
+    @media (max-width: 640px) {
+      .shell { width: calc(100% - 38px); }
+      .topbar { height: 70px; }
+      .nav { gap: 14px; }
+      .nav a:not(.nav-cta) { display: none; }
+      .nav-cta { padding: 9px 12px; font-size: 11px; }
+      .hero { display: block; padding: 62px 0 40px; }
+      h1 { font-size: clamp(50px, 14vw, 68px); }
+      .hero-copy { font-size: 15px; }
+      .hero-art { min-height: 310px; margin: 17px auto 0; transform: scale(.78); transform-origin: center; }
+      .proof-inner { grid-template-columns: 1fr; gap: 0; padding: 17px 0; }
+      .proof-item { min-height: 45px; }
+      .section { padding: 72px 0; }
+      .section-head { display: block; margin-bottom: 30px; }
+      .section-intro { margin-top: 16px; }
+      .projects { grid-template-columns: 1fr; }
+      .project { min-height: 305px; padding: 23px; }
+      .approach { padding: 70px 0; }
+      .approach-grid, .about { grid-template-columns: 1fr; gap: 30px; }
+      .principles { gap: 20px; }
+      .about-card { min-height: 230px; }
+      .contact-inner { display: block; }
+      .contact .button { margin-top: 14px; }
+      .footer-inner { align-items: flex-start; gap: 18px; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="brand" href="#home" aria-label="Katie Rahmani, home"><span class="brand-mark">k</span><span>KATIE RAHMANI</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Let’s connect <span class="arrow">↗</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="shell hero" id="home">
+      <div>
+        <div class="eyebrow">Industrial-organizational psychology</div>
+        <h1>Better work<br>starts with<br><em>understanding</em><br>people.</h1>
+        <p class="hero-copy">I turn people science into thoughtful, practical solutions for healthier teams and more effective organizations.</p>
+        <div class="hero-actions"><a class="button" href="#projects">Explore my work <span class="arrow">↘</span></a><a class="text-link" href="#about">A little about me <span class="arrow">↗</span></a></div>
+      </div>
+      <div class="hero-art" aria-label="People, research, and organizational systems connected in a continuous cycle">
+        <div class="orbit"></div><div class="art-core">IO</div>
+        <span class="orbit-label label-one">People</span><span class="orbit-label label-two">Evidence</span><span class="orbit-label label-three">Culture</span><span class="orbit-label label-four">Impact</span>
+        <span class="hero-note">A human-centered view of work</span>
+      </div>
+    </section>
+    <div class="proof"><div class="shell proof-inner">
+      <div class="proof-item"><span class="proof-icon">✳</span>Grounded in behavioral science</div>
+      <div class="proof-item"><span class="proof-icon">↗</span>Designed for real-world application</div>
+      <div class="proof-item"><span class="proof-icon">◎</span>Focused on people and performance</div>
+    </div></div>
+    <section class="shell section" id="projects">
+      <div class="section-head"><div><div class="section-kicker">Selected work / 01—04</div><h2>Projects with people<br>at the center.</h2></div><p class="section-intro">A selection of I-O psychology work across the employee lifecycle. Each project connects a meaningful workplace question to a clear, evidence-informed response.</p></div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter active" type="button" data-filter="all" aria-pressed="true">All projects</button><button class="filter" type="button" data-filter="experience" aria-pressed="false">Employee experience</button><button class="filter" type="button" data-filter="talent" aria-pressed="false">Talent &amp; selection</button><button class="filter" type="button" data-filter="development" aria-pressed="false">Development</button>
+      </div>
+      <div class="projects">
+        <article class="project" data-category="experience"><div><div class="project-top"><span class="project-num">01 / LISTEN &amp; LEARN</span><span class="project-tag">Employee experience</span></div><div class="project-art" aria-hidden="true"><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><h3>Listening beyond the survey</h3><p>A practical approach to understanding employee voice—combining listening methods, thoughtful analysis, and clear next steps for leaders.</p></div><div class="project-foot"><span>Engagement · Qualitative research</span><span>↗</span></div></article>
+        <article class="project" data-category="talent"><div><div class="project-top"><span class="project-num">02 / SELECT WITH PURPOSE</span><span class="project-tag">Talent &amp; selection</span></div><div class="project-art" aria-hidden="true"><div class="steps"><b>01</b><i></i><b>02</b><i></i><b>03</b><i></i><b>04</b></div></div><h3>Building a better selection process</h3><p>A structured hiring framework that connects role requirements to fair, job-relevant assessment and a consistent candidate experience.</p></div><div class="project-foot"><span>Job analysis · Assessment design</span><span>↗</span></div></article>
+        <article class="project" data-category="development"><div><div class="project-top"><span class="project-num">03 / GROW TOGETHER</span><span class="project-tag">Development</span></div><div class="project-art" aria-hidden="true"><div class="people-art"><i class="person"></i><i class="person"></i><i class="person"></i><i class="person"></i></div></div><h3>Making leadership development stick</h3><p>A learning experience built around the everyday behaviors that help managers create clarity, trust, and room for people to grow.</p></div><div class="project-foot"><span>Leadership · Learning design</span><span>↗</span></div></article>
+        <article class="project" data-category="experience"><div><div class="project-top"><span class="project-num">04 / DESIGN FOR BELONGING</span><span class="project-tag">Organizational culture</span></div><div class="project-art" aria-hidden="true"><div class="matrix"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><h3>Turning values into daily behaviors</h3><p>A culture-focused toolkit to help teams translate shared values into observable practices and more intentional ways of working.</p></div><div class="project-foot"><span>Culture · Team effectiveness</span><span>↗</span></div></article>
+      </div>
+    </section>
+    <section class="approach" id="approach"><div class="shell approach-grid">
+      <div><div class="section-kicker">How I work / 02</div><h2>Thoughtful research.<br>Useful outcomes.</h2></div>
+      <div class="approach-copy"><p>Good people practices are built by asking the right questions, using evidence responsibly, and making the answer useful to the people who need it. My approach brings rigor and empathy into the same room.</p>
+        <div class="principles"><div class="principle"><strong>Start with the context</strong><span>Understand the people, the work, and the question before choosing a solution.</span></div><div class="principle"><strong>Use evidence well</strong><span>Bring the right mix of research and data to make decisions more grounded.</span></div><div class="principle"><strong>Make it actionable</strong><span>Turn complex findings into clear recommendations people can put into practice.</span></div><div class="principle"><strong>Keep people in view</strong><span>Consider fairness, access, and lived experience throughout the process.</span></div></div>
+      </div>
+    </div></section>
+    <section class="shell section" id="about"><div class="about">
+      <div class="about-card"><div class="monogram">kr.</div><p>Curious about what helps people and organizations do their best work.</p></div>
+      <div class="about-copy"><div class="section-kicker">A little about me / 03</div><h2>People are the point.</h2><p>I’m Katie, an industrial-organizational psychology practitioner interested in the places where people, work, and organizations meet. I enjoy making research approachable and building people practices that work in the real world.</p><p>This portfolio is a growing collection of projects, ideas, and tools. I’m always glad to connect with people who care about making work better.</p><div class="skills"><span>People analytics</span><span>Employee experience</span><span>Talent assessment</span><span>Organizational development</span><span>Research &amp; evaluation</span></div></div>
+    </div></section>
+    <section class="contact" id="contact"><div class="shell contact-inner"><div><div class="section-kicker">Open to good conversations / 04</div><h2>Let’s make work work better.</h2><p>Have a project, question, or opportunity in mind? I’d love to hear from you.</p></div><a class="button" href="mailto:hello@example.com">Get in touch <span class="arrow">↗</span></a></div></section>
+  </main>
+  <footer class="shell"><div class="footer-inner"><span>© <span id="year"></span> Katie Rahmani · I-O Psychology</span><div class="footer-links"><a href="#home">Back to top ↑</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></footer>
+  <script>
+    const filters = document.querySelectorAll('.filter');
+    const projects = document.querySelectorAll('.project');
+    filters.forEach((button) => button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      filters.forEach((item) => {
+        const selected = item === button;
+        item.classList.toggle('active', selected);
+        item.setAttribute('aria-pressed', String(selected));
+      });
+      projects.forEach((project) => {
+        project.hidden = filter !== 'all' && project.dataset.category !== filter;
+      });
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
